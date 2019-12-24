@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Hello World</title>
+</head>
+<body>
+    <div id="application-root"></div> <!--Empty element that is selected by JS code and renders our React app-->
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js"> //React library file
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> //ReactDOM library file
+        ReactDOM.render(element, container); //Render the react app on the webpage (DOM)
+        // Container = The DOM element we insert our app into
+        // Element = Our React app, which is the content of the container
+    </script>
+    <script>
+        // JS code will go here
+        const appRoot = document.querySelector('#application-root'); //querySelector = Generic JS function that helps us to select DOM nodes and manipulate them with JS with CSS selectors as arguments
+        ReactDOM.render('Hello, world!', appRoot); // .render method is for displaying objects, not adding HTML
+        const helloWorldH1 = React.createElement('h1', null, 'Hello, world!'); //Takes 3 arguments: type, props and children; Creates an instance of an element
+        ReactDOM.render(helloWorldH1, appRoot);
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>React Hello World</title>
+</head>
+<body>
+    <div id="application-root"></div>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">    
+    </script>
+    <script type = "text/babel">
+        // App Component
+        function App1() {
+            return (
+                <main>
+                <header>
+                    <h1>Sally Stevenson</h1>
+                    <h2>Aspiring Web Developer</h2>
+                    <h3>Contact Info</h3>
+                </header>
+                <address>
+                    <p>Email address:<a href="mailto:sally.stevenson@gmail.com">sally.stevenson@gmail.com</a></p>
+                    <p>Phone number:<a href="tel:+156746894">+156746894></a></p>
+                    <img src = "https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally" height="200" width="140"/>
+                </address>                
+                <section>
+                <h2>Employment History</h2>
+                    <table>
+                    <tr>
+                        <th>Apple</th>
+                        <th>Google</th>
+                    </tr>
+                    <tr>
+                        <td>Software Developer: Sept 2018 - Present</td>
+                        <td>- Software Developer: Oct 2017 - Sept 2018</td>
+                    </tr>
+                    <tr>
+                        <td>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+                        <td>- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>    
+                    </tr>       
+                    </table>
+                </section> 
+                <section>
+                <h2>Education</h2>
+                <ul>
+                <li> Thinkful College - Bachelors in Computer Engineering: 2014 - 2017</li>  
+                </ul>
+                </section>
+                </main>
+            ); //Parentheses around the div are optional
+        };
+        // Use App Component: insert the App's element tree into the #application-root
+        ReactDOM.render(
+            <App1/>, document.querySelector('#application-root')
+        );
+    </script>
+</body>
+</html>
